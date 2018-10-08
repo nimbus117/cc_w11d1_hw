@@ -15,4 +15,14 @@ public class PrinterTest {
     public void hasNumberOfSheetsLeft() {
         assertEquals(20, printer.getSheetsLeft());
     }
+
+    @Test
+    public void ableToPrintEnoughSheets() {
+        assertEquals(true, printer.print(2,3));
+    }
+
+    @Test
+    public void ableToPrintNotEnoughSheets() {
+        assertEquals(false, printer.print(10,3));
+    }
 }
