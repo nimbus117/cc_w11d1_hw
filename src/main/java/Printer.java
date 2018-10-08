@@ -1,8 +1,10 @@
 public class Printer {
     private int sheets;
+    private int toner;
 
     public Printer() {
         this.sheets = 20;
+        this.toner = 20;
     }
 
     public int getSheetsLeft() {
@@ -10,9 +12,10 @@ public class Printer {
     }
 
     public boolean print(int pages, int copies) {
-        int sheetsToPrint = pages * copies;
-        if (sheetsToPrint <= this.sheets) {
-            this.sheets = this.sheets - sheetsToPrint;
+        int totalPages = pages * copies;
+        if (totalPages <= this.sheets) {
+            this.sheets = this.sheets - totalPages;
+            this.toner = this.toner - totalPages;
             return true;
         }
         return false;
@@ -20,5 +23,9 @@ public class Printer {
 
     public void refil() {
         this.sheets = 20;
+    }
+
+    public int getToner() {
+        return toner;
     }
 }
