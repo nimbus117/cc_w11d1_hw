@@ -31,4 +31,11 @@ public class PrinterTest {
         printer.print(2,3);
         assertEquals(14, printer.getSheetsLeft());
     }
+
+    @Test
+    public void canRefil() {
+        printer.print(2,3);
+        printer.refil()
+        assertEquals(20, printer.getSheetsLeft());
+    }
 }
