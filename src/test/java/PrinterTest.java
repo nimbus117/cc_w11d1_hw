@@ -38,4 +38,10 @@ public class PrinterTest {
         printer.refil();
         assertEquals(20, printer.getSheetsLeft());
     }
+
+    @Test
+    public void reducesTonerByOnePerPage() {
+        printer.print(2,3);
+        assertEquals(14, printer.getToner());
+    }
 }
