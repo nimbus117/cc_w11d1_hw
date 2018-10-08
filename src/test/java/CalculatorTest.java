@@ -19,16 +19,16 @@ public class CalculatorTest {
 
     @Test
     public void canSubtract() {
-        assertEquals(2, calculator.add(5,3));
+        assertEquals(2, calculator.subtract(5,3));
     }
 
     @Test
     public void canMultiply() {
-        assertEquals(10, calculator.add(2,5));
+        assertEquals(10, calculator.multiply(2,5));
     }
 
     @Test
     public void canDivide() {
-        assertEquals(5, calculator.add(10,2));
+        assertEquals(5, calculator.divide(10,2));
     }
 }
