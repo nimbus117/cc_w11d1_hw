@@ -35,7 +35,7 @@ public class PrinterTest {
     @Test
     public void canRefil() {
         printer.print(2,3);
-        printer.refil()
+        printer.refil();
         assertEquals(20, printer.getSheetsLeft());
     }
 }

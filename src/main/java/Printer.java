@@ -17,4 +17,8 @@ public class Printer {
         }
         return false;
     }
+
+    public void refil() {
+        this.sheets = 20;
+    }
 }
