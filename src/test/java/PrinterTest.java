@@ -25,4 +25,10 @@ public class PrinterTest {
     public void ableToPrintNotEnoughSheets() {
         assertEquals(false, printer.print(10,3));
     }
+
+    @Test
+    public void removesSheetsWhenPrinting() {
+        printer.print(2,3);
+        assertEquals(14, printer.getSheetsLeft());
+    }
 }
